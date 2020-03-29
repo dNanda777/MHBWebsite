@@ -3,3 +3,4 @@ This repository will be used to hosting a website related with project in BIT302
 <3/30/2020> just started on gitHub trial
 
 (actually, idk what I am doing rn)
+<12:51 AM> now we are at the changes_1 branch

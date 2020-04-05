@@ -1,3 +1,5 @@
+<!--this connect to database made by Ida Ayu Nanda Dewi Pradnyani-->
+
 <?php
     $connectSQL = mysqli_connect("localhost", "root", "", "mhb website");
 

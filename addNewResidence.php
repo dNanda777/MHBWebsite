@@ -19,17 +19,32 @@
 
                     <div class="form-group">
                         <label for="Address">address</label>
-                        <input type="text" name="address" class="form-control col-md-7" placeholder="e.g. Kuala Lumpur City">
+                        <input type="text" name="address" class="form-control col-md-7" placeholder="e.g. Block A">
                     </div>
 
                     <div class="form-group">
-                        <label for="Unit Numbers">unitNum</label>
-                        <input type="number" name="unitNum" class="form-control col-md-7" placeholder="Number of bedrooms">
+                        <label for="Size">size</label>
+                        <input type="number" name="size" class="form-control col-md-7" placeholder="e.g. 1 acre">
                     </div>
 
                     <div class="form-group">
-                        <label for="Floor Number">floorNum</label>
-                        <input type="number" name="floorNum" class="form-control col-md-7" placeholder="Number of floors">
+                        <label for="Bedrooms">bedrooms</label>
+                        <input type="number" name="bedroomNum" class="form-control col-md-7" placeholder="Number of bedrooms">
+                    </div>
+
+										<div class="form-group">
+                        <label for="Kitchens">kitchens</label>
+                        <input type="number" name="kitchenNum" class="form-control col-md-7" placeholder="Number of kitchens">
+                    </div>
+
+										<div class="form-group">
+                        <label for="Bathrooms">bathrooms</label>
+                        <input type="number" name="bathroomNum" class="form-control col-md-7" placeholder="Number of bathrooms">
+                    </div>
+
+										<div class="form-group">
+                        <label for="Monthly Rental">monthlyRental</label>
+                        <input type="number" name="monthlyRental" class="form-control col-md-7" placeholder="Price of rental per month">
                     </div>
 
                     <button type="submit" class="btn btn-primary" name="save">SAVE</button>
@@ -50,11 +65,15 @@
         if(isset($_POST['save']))
         {
             $address       = $_POST['address'];
-            $unitNum       = $_POST['unitNum'];
-            $floorNum     = $_POST['floorNum'];
+            $size       = $_POST['size'];
+            $bedrooms     = $_POST['bedrooms'];
+						$kitchens       = $_POST['kitchens'];
+            $bathrooms       = $_POST['bathrooms'];
+            $monthlyRental     = $_POST['monthlyRental'];
 
             mysqli_query($connectSQL, "INSERT INTO residences VALUES('',
-              '$address','$unitNum', '$floorNum')") or die(mysqli_error($connectSQL));
+              '$address','$size', '$bedrooms', '$kitchens', '$bathrooms',
+							 '$monthlyRental')") or die(mysqli_error($connectSQL));
 
             //echo "<div align='center'><h6> Loading... </h6></div>";
             echo "<h5>DONE</h5>";

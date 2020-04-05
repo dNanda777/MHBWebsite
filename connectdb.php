@@ -1,3 +1,4 @@
+<!--this connect to database made by Febrilia Eka Putri-->
 <?php
 
 $connectdb = mysqli_connect("localhost","root","","mhswebsite");

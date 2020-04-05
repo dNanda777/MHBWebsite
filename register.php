@@ -10,7 +10,7 @@
     <script src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-    
+
     <div class="container col-md-6">
         <div class="card">
             <div class="card-header bg-primary text-white">
@@ -40,7 +40,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
-                    
+
                 </form>
 
             </div>
@@ -65,6 +65,6 @@
                 '$username','$password', '$email', '$fullName')") or die(mysqli_error($connectdb));
 
             echo "<div align='center'><h5> Saving Data.... </h5></div>";
-            echo "<meta http-equiv='refresh' content='1;url=http://localhost/mhswebsite/applicant/index.php'>";
+            echo "<meta http-equiv='refresh' content='1;url=http://localhost/MHBWebsite/applicant/index.php'>";
         }
 ?>

@@ -24,12 +24,12 @@
 
                     <div class="form-group">
                         <label for="Unit Numbers">unitNum</label>
-                        <input type="number" name="unitNum" class="form-control col-md-7" placeholder="Number of bedrooms in total">
+                        <input type="number" name="unitNum" class="form-control col-md-7" placeholder="Number of bedrooms">
                     </div>
 
                     <div class="form-group">
                         <label for="Floor Number">floorNum</label>
-                        <input type="number" name="floorNum" class="form-control col-md-7" placeholder="Number of floors in total">
+                        <input type="number" name="floorNum" class="form-control col-md-7" placeholder="Number of floors">
                     </div>
 
                     <button type="submit" class="btn btn-primary" name="save">SAVE</button>

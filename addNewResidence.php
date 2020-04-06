@@ -66,9 +66,9 @@
         {
             $address       = $_POST['address'];
             $size       = $_POST['size'];
-            $bedrooms     = $_POST['bedrooms'];
-						$kitchens       = $_POST['kitchens'];
-            $bathrooms       = $_POST['bathrooms'];
+            $bedrooms     = $_POST['bedroomNum'];
+						$kitchens       = $_POST['kitchenNum'];
+            $bathrooms       = $_POST['bathroomNum'];
             $monthlyRental     = $_POST['monthlyRental'];
 
             mysqli_query($connectSQL, "INSERT INTO residences VALUES('',

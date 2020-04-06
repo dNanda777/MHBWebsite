@@ -14,6 +14,7 @@ if($cek > 0){
 	$_SESSION['username'] = $username;
 	$_SESSION['status'] = "login";
 	header("location:applicant/index.php");
+	//there is not yet any of the option that directing to loginstaff.php
 }else{
 	header("location:login.php?pesan=gagal");
 }

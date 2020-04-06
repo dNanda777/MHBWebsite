@@ -10,7 +10,7 @@
     <script src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-    
+
 
 
     <form method="POST" action="logincheck.php">
@@ -33,7 +33,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary" name="login">LOGIN</button>
-                    
+
                 </form>
 
             </div>
@@ -44,4 +44,3 @@
 
 </body>
 </html>
-

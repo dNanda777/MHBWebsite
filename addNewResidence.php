@@ -75,8 +75,8 @@
               '$address','$size', '$bedrooms', '$kitchens', '$bathrooms',
 							 '$monthlyRental')") or die(mysqli_error($connectSQL));
 
-            //echo "<div align='center'><h6> Loading... </h6></div>";
-            echo "<h5>DONE</h5>";
-            //echo "<meta http-equiv='refresh' content='1;url=http://localhost/csw202/praktik-crudcustomer/data_customer.php'>";
+            echo "<div align='center'><h6> Loading... </h6></div>";
+            //echo "<h5>DONE</h5>";
+            echo "<meta http-equiv='refresh' content='1;url=http://localhost/mhb/tes_tabel_residences.php'>";
         }
 ?>

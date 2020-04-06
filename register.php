@@ -65,6 +65,6 @@
                 '$username','$password', '$email', '$fullName')") or die(mysqli_error($connectdb));
 
             echo "<div align='center'><h5> Saving Data.... </h5></div>";
-            echo "<meta http-equiv='refresh' content='1;url=http://localhost/MHBWebsite/applicant/index.php'>";
+            echo "<meta http-equiv='refresh' content='1;url=http://localhost/mhb/applicant/index.php'>";
         }
 ?>

@@ -16,5 +16,5 @@ if($cek > 0){
 	header("location:applicant/index.php");
 	//there is not yet any of the option that directing to loginstaff.php
 }else{
-	header("location:login.php?pesan=gagal");
+	header("location:login.php?failed");
 }

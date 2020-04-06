@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>MicroHousing Sytem Website</title>
-
-    <!-- menyisipkan bootstrap -->
-     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
 </head>
 <body class="bg-light">
     <header>

@@ -3,6 +3,6 @@
 
     if(mysqli_connect_errno($connectSQL))
     {
-        echo "Koneksi Gagal ". mysqli_connect_error();
+        echo "Failed to connect ". mysqli_connect_error();
     }
 ?>

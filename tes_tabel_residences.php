@@ -36,14 +36,14 @@
                     ?>
                     <tr>
                         <td> <?php echo $no++; ?> </td>
-                        <td> <?php echo $data['nama']; ?> </td>
-                        <td> <?php echo $data['telp']; ?> </td>
-                        <td> <?php echo $data['alamat']; ?> </td>
-                        <td> <?php echo $data['kota']; ?> </td>
-                        <td> <?php echo $data['kodepos']; ?> </td>
+                        <td> <?php echo $SQLdata['address']; ?> </td>
+                        <td> <?php echo $SQLdata['size']; ?> </td>
+                        <td> <?php echo $SQLdata['bedrooms']; ?> </td>
+                        <td> <?php echo $SQLdata['kitchens']; ?> </td>
+                        <td> <?php echo $SQLdata['bathrooms']; ?> </td>
                         <td>
                             <!--<a href="edit_customer.php?idcustomer=<?php echo $data['idcustomer']; ?>" class="btn btn-sm btn-warning">Edit</a>-->
-                            <a href="delete.php?idcustomer=<?php echo $SQLdata['residenceID']; ?>" class="btn btn-sm btn-danger">Delete</a>
+                            <a href="delete.php?residenceID=<?php echo $SQLdata['residenceID']; ?>" class="btn btn-sm btn-danger">Delete</a>
                         </td>
                     </tr>
 

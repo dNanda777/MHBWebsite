@@ -29,6 +29,7 @@
 	?>
 
 	<center><h4>Welcome to MHSWebsite</h4></center>
+	<a href="http://localhost/mhswebsite/tes_tabel_residences.php" class="btn btn-sm">View Residences</a>
 
 	
 

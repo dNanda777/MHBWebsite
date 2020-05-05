@@ -18,7 +18,7 @@ $data = mysqli_fetch_assoc($SQLdata);
 				<a class="navbar-brand" href="index.php">Micro Housing Booking</a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li><a href="#">About Us</a></li>
+				<li><a href="../AboutMHB.php">About MHB</a></li>
 				<li><a href="../addNewResidence.php">Add New Residence</a></li>
 				<li><a href="../ViewResidence.php">View Residence</a></li>
 				<li><a href="../ViewApplication-Officer.php">View Application</a></li>

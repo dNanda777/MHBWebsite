@@ -5,7 +5,7 @@
   			<a class="navbar-brand" href="index.php">Micro Housing Booking</a>
   		</div>
   		<ul class="nav navbar-nav">
-  			<li><a href="About.php">About Us</a></li>
+  			<li><a href="../About.php">About Us</a></li>
   			<li><a href="ViewResidence.php">View Residence</a></li>
   			<li><a href="ViewApplication.php">View Application</a></li>
   			<li class="dropdown"><a class="dropdown-toggle" data-toggle=

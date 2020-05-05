@@ -25,20 +25,20 @@
 			<a class="navbar-brand" href="index.php">Micro Housing Booking</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li><a href="About.php">About Us</a></li>
+			<li><a href="../AboutMHB.php">About Us</a></li>
 			<li><a href="ViewResidence.php">View Residence</a></li>
 			<li><a href="ViewApplication.php">View Application</a></li>
 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li><a href="Profil.php">Profile</a></li>
 					<li><a href="logout.php">Logout</a></li>
-			</li>	
+			</li>
 		</ul>
 	</div>
-</nav>	
+</nav>
 
 <div class="container">
-  <h2>Profile</h2>          
+  <h2>Profile</h2>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -47,8 +47,8 @@
         <th>username</th>
         <th>Monthly Income</th>
       </tr>
-      <?php 
-           
+      <?php
+
             include "../connectdb.php";
             $no = 1;
             $tampil = mysqli_query($connectdb, "SELECT * FROM user_applicant");
@@ -69,5 +69,3 @@
 
 </body>
 </html>
-
-

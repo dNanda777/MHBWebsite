@@ -1,3 +1,4 @@
+<?php session_start();?>
 <title>Housing Alocation</title>
 
 <?php include('HF/header.php');?>

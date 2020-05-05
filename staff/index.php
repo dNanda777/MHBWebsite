@@ -1,5 +1,8 @@
 <?php
 	session_start();
+	if($_SESSION['status']!="login"){
+		header("location:../index.php?message=notyetloggedin");
+	}
  ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +20,7 @@
 				<a class="navbar-brand" href="index.php">Micro Housing Booking</a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li><a href="#">About Us</a></li>
+				<li><a href="../AboutMHB.php">About Us</a></li>
 				<li><a href="../addNewResidence.php">Add New Residence</a></li>
 				<li><a href="../ViewResidence.php">View Residence</a></li>
 				<li><a href="../ViewApplication-Officer.php">View Application</a></li>
@@ -36,12 +39,6 @@
 	<center><h3>Staff Page of MHSWebsite</h3></center>
 
 	<br>
-
-	<?php	if($_SESSION['status']!="login"){
-		header("location:../index.php?message=notyetloggedin");
-	}
-	?>
-
 	<center><h4>Welcome, <?php echo $_SESSION['username']; ?>! You already
 		logged in</h4></center>
 <br>

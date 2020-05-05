@@ -1,13 +1,17 @@
-<title>Add New Residence</title>
-<?php include ('HF/header.php')?>
-    <div class="container col-md-6">
-        <div class="card">
-            <div class="card-header bg-primary text-white">
-                Add new residence
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>  BETA - add new residence </title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+			<h4>Add new residence</h4>
             <div class="card-body">
-                <form action="" method="POST" class="form-item">
-
+                <form class="form-horizontal" action="viewResidence.php" >
                     <div class="form-group">
                         <label for="Address">address</label>
                         <input type="text" name="address" class="form-control
@@ -50,9 +54,6 @@
 											SAVE</button>
                     <button type="reset" class="btn btn-danger">CANCEL</button>
                 </form>
-
-            </div>
-        </div>
     </div>
 
 
@@ -61,33 +62,23 @@
 
 <?php
 
-		// session_start();
-
-		include "connectSQL.php";
-		// include "loginstaffcheck.php";
-		// 		echo $_SESSION['officerID'];
-				//using username of current session from officer
-
-				// $officer = mysqli_query($connectSQL,"SELECT * FROM user_officer WHERE
-				// 	username = $_SESSION['username']") or die(mysqli_error($connectSQL));
+        include "connectSQL.php";
         if(isset($_POST['save']))
         {
-            $residenceAddress       = $_POST ['address'];
-            $Size       = $_POST['size'];
-            $bedroomNum     = $_POST['bedroomNum'];
-						$kitchenNum       = $_POST['kitchenNum'];
-            $bathroomNum       = $_POST['bathroomNum'];
+            $address       = $_POST['address'];
+            $size       = $_POST['size'];
+            $bedrooms     = $_POST['bedroomNum'];
+						$kitchens       = $_POST['kitchenNum'];
+            $bathrooms       = $_POST['bathroomNum'];
             $monthlyRental     = $_POST['monthlyRental'];
-						// $officer 				 = $_SESSION['username'];
 
-            mysqli_query($connectSQL, "INSERT INTO residence VALUES('',
-              '$residenceAddress','$Size', '$bedroomNum', '$kitchenNum',
-							'$bathroomNum','$monthlyRental','')") or die
-							 (mysqli_error($connectSQL));
+            mysqli_query($connectSQL, "INSERT INTO residences VALUES('',
+              '$address','$size', '$bedrooms', '$kitchens', '$bathrooms',
+							 '$monthlyRental')") or die(mysqli_error($connectSQL));
 
             echo "<div align='center'><h6> Loading... </h6></div>";
             //echo "<h5>DONE</h5>";
             echo "<meta http-equiv='refresh' content='1;url=
-						http://localhost/mhb/viewResidence.php'>";
+						http://localhost/mhb/tes_tabel_residences.php'>";
         }
 ?>

@@ -2,16 +2,15 @@
 <html>
 <title>About MHB Website </title>
 <?php
-session_start();
-include('HF/header.php') ?>
+include('../HF/headerMHB.php') ?>
 <link rel="stylesheet" type="text/css" href="../css/about-us-1.css">
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="staff/index.php">Micro Housing Booking</a>
+			<a class="navbar-brand" href="index.php">Micro Housing Booking</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li><a href="../AboutMHB.php">About Us</a></li>
+			<li><a href="AboutMHB.php">About Us</a></li>
 			<li><a href="ViewResidence.php">View Residence</a></li>
 			<li><a href="ViewApplication-Officer.php">View Application</a></li>
 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
@@ -68,11 +67,11 @@ include('HF/header.php') ?>
   </section>
   <section class="culture-section company-sections ct-u-paddingBoth100 paddingBothHalf noTopMobilePadding">
     <div class="container">
-      <div class="row">
+      <left><div class="row">
         <div class="col-md-8 col-md-offset-2">
           <h3>Team members</h3>
         </div>
-      </div>
+			</left></div>
       <div class="row ct-u-paddingBoth20">
         <div class="col-xs-6 col-md-4">
           <div class="company-icons-white">
@@ -83,17 +82,15 @@ include('HF/header.php') ?>
             </p>
           </div>
         </div>
-      </div>
       <div class="col-xs-6 col-md-4">
         <div class="company-icons-white">
           <i class="fa fa-medkit" aria-hidden="true"></i>
-          <p>Team Member - Ida Ayu Nanda Dewi Pradnyani </p>
-          <p class="company-icons-subtext ">
-            (CP: dayunanda9@gmail.com)
-          </p>
+	          <p>Team Member - Ida Ayu Nanda Dewi Pradnyani </p>
+	          <p class="company-icons-subtext ">(CP: dayunanda9@gmail.com)</p>
         </div>
       </div>
-    </div>
+		</div>
+	</div>
   </section>
 </div>
 </body>

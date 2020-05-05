@@ -21,7 +21,7 @@ if($cek > 0){
 	header("location:staff/index.php");
 	// header("location:addNewResidence.php");
 }else{
-	header("location:login.php?pesan=gagal");
+	header("location:loginstaff.php?pesan=gagal");
 	echo "gagal login";
 }
 ?>

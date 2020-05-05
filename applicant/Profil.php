@@ -25,9 +25,9 @@
 			<a class="navbar-brand" href="index.php">Micro Housing Booking</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li><a href="../AboutMHB.php">About Us</a></li>
+			<li><a href="AboutMHB.php">About Us</a></li>
 			<li><a href="ViewResidence.php">View Residence</a></li>
-			<li><a href="ViewApplication.php">View Application</a></li>
+			<li><a href="ViewApplication-Applicant.php">View Application</a></li>
 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li><a href="Profil.php">Profile</a></li>
@@ -49,9 +49,9 @@
       </tr>
       <?php
 
-            include "../connectdb.php";
+            include "../connectSQL.php";
             $no = 1;
-            $tampil = mysqli_query($connectdb, "SELECT * FROM user_applicant");
+            $tampil = mysqli_query($connectSQL, "SELECT * FROM user_applicant");
             while($data=mysqli_fetch_array($tampil))
             {
         ?>

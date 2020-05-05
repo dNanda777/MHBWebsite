@@ -2,12 +2,13 @@
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="index.php">Micro Housing Booking</a>
+			<a class="navbar-brand" href="staff/index.php">Micro Housing Booking</a>
 		</div>
 		<ul class="nav navbar-nav">
 			<li><a href="About.php">About Us</a></li>
+			<li><a href="addNewResidence.php">Add New Residence</a></li>
 			<li><a href="ViewResidence.php">View Residence</a></li>
-			<li><a href="ViewApplication.php">View Application</a></li>
+			<li><a href="#">View Application</a></li>
 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li><a href="staff/Profil.php">Profile</a></li>

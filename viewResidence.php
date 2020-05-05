@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('HF/header.php');
 ?>
     <meta charset="UTF-5">
@@ -18,19 +19,24 @@ include('HF/header.php');
           <h1>Residences</h1>
       </div>
   </header>
-  <nav class=navbar-nav>
-    <ul class="nav navbar-nav">
-      <li><a href="#">About Us</a></li>
-      <li><a href="addNewResidence.php">Add New Residence</a></li>
-      <li><a href="ViewResidence.php">View Residence</a></li>
-      <li><a href="ViewApplication-Officer.php">View Application</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="Profil.php">Profile</a></li>
-          <li><a href="logout.php">Logout</a></li>
-      </li>
-    </ul>
-      </nav>
+  <nav class="navbar navbar-default">
+  	<div class="container-fluid">
+  		<div class="navbar-header">
+  			<a class="navbar-brand" href="staff/index.php">Micro Housing Booking</a>
+  		</div>
+  		<ul class="nav navbar-nav">
+  			<li><a href="About.php">About Us</a></li>
+  			<li><a href="addNewResidence.php">Add New Residence</a></li>
+  			<li><a href="ViewResidence.php">View Residence</a></li>
+  			<li><a href="#">View Application</a></li>
+  			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
+  				<ul class="dropdown-menu">
+  					<li><a href="staff/Profil.php">Profile</a></li>
+  					<li><a href="logout.php">Logout</a></li>
+  				</u>
+  			</li>
+  		</ul>
+  	</div>
   </nav>
 </div>
     <div class="container col-md-10">

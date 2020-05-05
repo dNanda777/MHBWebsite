@@ -1,19 +1,27 @@
 <?php
 session_start();
 
-include 'connectdb.php';
+include 'connectSQL.php';
 
 $staffID = $_POST['staffID'];
 $username = $_POST['username'];
 
-$data = mysqli_query($connectdb, "SELECT * FROM housingofficer WHERE staffID='$staffID' and username='$username'");
+//try to get officer ID
+$row = mysqli_query($connectSQL,
+"SELECT * FROM user_officer WHERE staffID='$staffID' and username='$username'");
 
-$cek = mysqli_num_rows($data);
+$SQLdata = mysqli_fetch_assoc($row);
+$officerID = $SQLdata['officerID'];
 
+$cek = mysqli_num_rows($row);
 if($cek > 0){
 	$_SESSION['username'] = $username;
+	$_SESSION['officerID']= $officerID;
 	$_SESSION['status'] = "login";
 	header("location:staff/index.php");
+	// header("location:addNewResidence.php");
 }else{
 	header("location:login.php?pesan=gagal");
+	echo "gagal login";
 }
+?>

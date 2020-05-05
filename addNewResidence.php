@@ -8,15 +8,10 @@
 	<script src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-
-    <div class="container col-md-6">
-        <div class="card">
-            <div class="card-header bg-primary text-white">
-                Add new residence
-            </div>
+    <div class="container">
+			<h4>Add new residence</h4>
             <div class="card-body">
-                <form action="" method="POST" class="form-item">
-
+                <form class="form-horizontal" action="viewResidence.php" >
                     <div class="form-group">
                         <label for="Address">address</label>
                         <input type="text" name="address" class="form-control
@@ -59,9 +54,6 @@
 											SAVE</button>
                     <button type="reset" class="btn btn-danger">CANCEL</button>
                 </form>
-
-            </div>
-        </div>
     </div>
 
 

@@ -56,24 +56,12 @@ include ('HF/header.php')?>
             </div>
         </div>
     </div>
-
-
-</body>
+  </body>
 </html>
 
 <?php
-
-		// session_start();
-
-		include "connectSQL.php";
-		// include "loginstaffcheck.php";
-		// 		echo $_SESSION['officerID'];
-				//using username of current session from officer
-
-				// $officer = mysqli_query($connectSQL,"SELECT * FROM user_officer WHERE
-				// 	username = $_SESSION['username']") or die(mysqli_error($connectSQL));
-        if(isset($_POST['save']))
-        {
+include "connectSQL.php";
+if(isset($_POST['save'])){
             $residenceAddress       = $_POST ['address'];
             $Size       = $_POST['size'];
             $bedroomNum     = $_POST['bedroomNum'];

@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>MicroHousing Sytem Website</title>
-
     <!-- menyisipkan bootstrap -->
-     <link rel="stylesheet" href="css/bootstrap.min.css" />
+     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body class="bg-light">
     <header>
@@ -19,16 +18,16 @@
                         <h1>Welcome to Micro Housing System</h1>
                     </div>
                     <div class="col-md-5">
-                        <a href="login.php" class="btn btn-secondary">Log In as Applicant</a>
-                        <a href="loginstaff.php" class="btn btn-secondary">Log In as Staff</a>
-                        <a href="register.php" class="btn btn-success">Register</a>
+                        <a href="login.php" class="btn btn-secondary">
+                          Log In as Applicant</a>
+                        <a href="loginstaff.php" class="btn btn-secondary">
+                          Log In as Staff</a>
+                        <a href="register.php" class="btn btn-success">
+                          Register</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
-  
-</body>
+  </body>
 </html>
-

@@ -29,7 +29,9 @@ include('HF/header.php');
   			<li><a href="addNewResidence.php">Add New Residence</a></li>
   			<li><a href="ViewResidence.php">View Residence</a></li>
   			<li><a href="#">View Application</a></li>
-  			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
+  			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
+          href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span
+          class="caret"></span></a>
   				<ul class="dropdown-menu">
   					<li><a href="staff/Profil.php">Profile</a></li>
   					<li><a href="logout.php">Logout</a></li>
@@ -70,25 +72,17 @@ include('HF/header.php');
                         <td> <?php echo $SQLdata['kitchenNum']; ?> </td>
                         <td> <?php echo $SQLdata['bathroomNum']; ?> </td>
                         <td>
-                            <!--<a href="edit_customer.php?idcustomer=
-                            " class="btn btn-sm btn-
-                            warning">Edit</a>-->
-
                             <a href="delete.php?residenceID=<?php echo $SQLdata
                             ['residenceID']; ?>" class="btn btn-sm btn-danger
                             ">Delete</a>
                           <?php
-                            // echo "are you sure to delete this residence? "
                           }
                           ?>
-
                         </td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
-
-
-</body>
+  </body>
 </html>

@@ -75,7 +75,7 @@ include('../HF/headerMHB.php') ?>
       <div class="row ct-u-paddingBoth20">
         <div class="col-xs-6 col-md-4">
           <div class="company-icons-white">
-            <i class="fa fa-medkit" aria-hidden="true"></i>
+            <i class="fa fa-medkit" naria-hidden="true"></i>
             <p>Team Leader - Febrilia Eka Putri </p>
             <p class="company-icons-subtext ">
               (CP: febrilia74@gmail.com)

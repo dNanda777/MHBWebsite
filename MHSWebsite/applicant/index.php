@@ -27,6 +27,8 @@
 			<li><a href="About.php">About Us</a></li>
 			<li><a href="ViewResidence.php">View Residence</a></li>
 			<li><a href="ViewApplication.php">View Application</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li><a href="Profil.php">Profile</a></li>

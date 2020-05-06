@@ -28,13 +28,15 @@
         <ul class="nav navbar-nav">
             <li><a href="About.php">About Us</a></li>
             <li><a href="ViewResidence.php">View Residence</a></li>
-            <li><a href="ViewApplication.php">View Application</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="Profil.php">Profile</a></li>
-                    <li><a href="logout.php">Logout</a></li>
-            </li>   
+            <li><a href="ViewApplication.php">View Application</a></li>  
         </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="Profil.php">Profile</a></li>
+                  <li><a href="logout.php">Logout</a></li>
+              </li> 
+      </ul>
     </div>
 </nav>  
 
@@ -42,15 +44,22 @@
   <h2>Submit Application</h2>
   <form class="form-horizontal" action="ViewApplication.php">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="requested_date">Requested Date:</label>
-      <div class="col-sm-10">          
-        <input type="date" class="form-control" id="requested_date" placeholder="Requested Date" name="requested_date">
+      <div class="col-sm-offset-2 col-sm-10">
+        <label for="applicationDate">Application Date</label>
+        <input type="date" name="applicationDate" class="form-control col-md-9" placeholder="applicationDate">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <label for="requested_date">Requested Date</label>
+        <input type="date" name="requested_date" class="form-control col-md-9" placeholder="requested_date">
       </div>
     </div>
   
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-primary">SUBMIT</button>
+        <button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
       </div>
     </div>
   </form>
@@ -60,15 +69,18 @@
 </html>
 
 <?php
-
         include "../connectdb.php";
         if(isset($_POST['submit']))
         {
-            $requested_date = $_POST['requested_date'];
+            $applicationDate  = $_POST['applicationDate'];
+            $requested_date   = $_POST['requested_date'];
+            //$status           = $_POST['status'];
+           // $applicantID      = $_POST['applicantID'];
+            //$residenceID      = $_POST['residenceID'];
 
-            mysqli_query($connectdb, "INSERT INTO application VALUES('$requested_date')") or die(mysqli_error($connectdb));
+            mysqli_query($connectdb, "INSERT INTO application VALUES('', '$applicationDate','$requested_date', '$status', '$applicantID', '$residenceID')") or die(mysqli_error($connectdb));
 
             echo "<div align='center'><h5> Loading.... </h5></div>";
-            echo "<meta http-equiv='refresh' content='1;url=http://localhost/mhswebsite/applicant/ViewApplication.php'>";
+            echo "<meta http-equiv='refresh'content='1;url=http://localhost/mhswebsite/applicant/ViewApplication.php'>";
         }
 ?>

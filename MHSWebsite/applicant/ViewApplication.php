@@ -27,12 +27,14 @@
 			<li><a href="About.php">About Us</a></li>
 			<li><a href="ViewResidence.php">View Residence</a></li>
 			<li><a href="ViewApplication.php">View Application</a></li>
-			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="Profil.php">Profile</a></li>
-					<li><a href="logout.php">Logout</a></li>
-			</li>	
 		</ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Profil.php">Profile</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </li> 
+    </ul>
 	</div>
 </nav>	
 
@@ -50,19 +52,28 @@
       </tr>
 
       <?php
+            error_reporting(0);
             include "../connectdb.php";
-            $no = 1;
+            //$no = 1;
             $tampil = mysqli_query($connectdb, "SELECT * FROM application");
             while($data=mysqli_fetch_array($tampil))
             {
             ?>
+
             <tr>
-              <td> <?php echo $no++; ?> </td>
-              <td> <?php echo $data['applicationDate']; ?> </td>
-              <td> <?php echo $data['requested_date']; ?> </td>
+              <td> <?php echo $data['applicationID']; ?> </td>
+              <td> <?php echo $data['applicationDate']= $_GET['applicationDate']; ?> </td>
+
+              <td> <?php echo $data['requested_date']= $_GET['requested_date']; ?> </td>
+
               <td> <?php echo $data['status']; ?> </td>
+
+              <!-- still trying to figure this out -->
               <td> <?php echo $data['applicantID']; ?> </td>
+
+              <!-- for now, residence ID, later will be the other fields-->
               <td> <?php echo $data['residenceID']; ?> </td>
+
             </tr>
 
               <?php } ?>

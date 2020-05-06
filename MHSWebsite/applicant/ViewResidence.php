@@ -27,12 +27,14 @@
 			<li><a href="About.php">About Us</a></li>
 			<li><a href="ViewResidence.php">View Residence</a></li>
 			<li><a href="ViewApplication.php">View Application</a></li>
-			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="Profil.php">Profile</a></li>
-					<li><a href="logout.php">Logout</a></li>
-			</li>	
 		</ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome, <?php echo $_SESSION['username']; ?>!<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Profil.php">Profile</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </li> 
+    </ul>
 	</div>
 </nav>	
 
@@ -51,6 +53,7 @@
       </tr>
 
       <?php
+            error_reporting(0);
             include "../connectdb.php";
             $no = 1;
             $tampil = mysqli_query($connectdb, "SELECT * FROM residences");
@@ -66,7 +69,7 @@
               <td> <?php echo $data['residenceAddress']; ?> </td>
               <td> <?php echo $data['size']; ?> </td>
               <td>
-                <a href="SubmitAplication.php?residenceID=<?php echo $SQLdata
+                <a href="SubmitAplication.php?residenceID=<?php echo $data
                 ['residenceID']; ?>" class="btn btn-sm btn-primary
                 ">Submit Appliaction</a>
               </td>

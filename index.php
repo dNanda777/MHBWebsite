@@ -17,16 +17,16 @@
                         <h1>Welcome to Micro Housing System</h1>
                     </div>
                     <div class="col-md-5">
-                        <a href="login.php" class="btn btn-secondary">Log In as Applicant</a>
-                        <a href="loginstaff.php" class="btn btn-secondary">Log In as Staff</a>
-                        <a href="register.php" class="btn btn-success">Register</a>
+                        <a href="login.php" class="btn btn-secondary">
+                          Log In as Applicant</a>
+                        <a href="loginstaff.php" class="btn btn-secondary">
+                          Log In as Staff</a>
+                        <a href="register.php" class="btn btn-success">
+                          Register</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
-  
-</body>
+  </body>
 </html>
-

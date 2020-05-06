@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/jquery-3.4.1.min.js"></script>
 </head>
-<body>
-
-
-
-    <form method="POST" action="logincheck.php">
+<body><form method="POST" action="logincheck.php">
     <div class="container col-md-6">
         <div class="card">
             <div class="card-header bg-primary text-white">

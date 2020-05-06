@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>  BETA - add new residence </title>
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<script src="js/jquery-3.4.1.min.js"></script>
-</head>
-<body>
-
+<title>Add New Residence</title>
+<?php
+session_start();
+include ('HF/header.php')?>
     <div class="container col-md-6">
         <div class="card">
             <div class="card-header bg-primary text-white">
@@ -63,30 +56,28 @@
             </div>
         </div>
     </div>
-
-
-</body>
+  </body>
 </html>
 
 <?php
-
-        include "connectSQL.php";
-        if(isset($_POST['save']))
-        {
-            $address       = $_POST['address'];
-            $size       = $_POST['size'];
-            $bedrooms     = $_POST['bedroomNum'];
-						$kitchens       = $_POST['kitchenNum'];
-            $bathrooms       = $_POST['bathroomNum'];
+include "connectSQL.php";
+if(isset($_POST['save'])){
+            $residenceAddress       = $_POST ['address'];
+            $Size       = $_POST['size'];
+            $bedroomNum     = $_POST['bedroomNum'];
+						$kitchenNum       = $_POST['kitchenNum'];
+            $bathroomNum       = $_POST['bathroomNum'];
             $monthlyRental     = $_POST['monthlyRental'];
+						// $officer 				 = $_SESSION['username'];
 
-            mysqli_query($connectSQL, "INSERT INTO residences VALUES('',
-              '$address','$size', '$bedrooms', '$kitchens', '$bathrooms',
-							 '$monthlyRental')") or die(mysqli_error($connectSQL));
+            mysqli_query($connectSQL, "INSERT INTO residence VALUES('',
+              '$residenceAddress','$Size', '$bedroomNum', '$kitchenNum',
+							'$bathroomNum','$monthlyRental','')") or die
+							 (mysqli_error($connectSQL));
 
             echo "<div align='center'><h6> Loading... </h6></div>";
             //echo "<h5>DONE</h5>";
             echo "<meta http-equiv='refresh' content='1;url=
-						http://localhost/mhb/tes_tabel_residences.php'>";
+						http://localhost/mhb/viewResidence.php'>";
         }
 ?>
